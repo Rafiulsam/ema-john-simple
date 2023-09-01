@@ -12,7 +12,7 @@ const Cart = ({ cart }) => {
     const grandTotal = totalPrice + totalShipping + tax
     return (
         <div className='cart'>
-            <h3 style={{ textAlign: 'center', fontWeight: "400", fontSize: '25px' }}>Oder summary</h3>
+            <h3 style={{ textAlign: 'center', fontWeight: "400", fontSize: '25px' }}>Order Summary</h3>
             <p>Selected Items: {cart.length}</p>
             <p>Total Price: ${totalPrice}</p>
             <p>Shipping Charge: ${totalShipping}</p>
