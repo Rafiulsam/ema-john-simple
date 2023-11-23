@@ -16,7 +16,7 @@ const Cart = ({ cart }) => {
             <p>Selected Items: {cart.length}</p>
             <p>Total Price: ${totalPrice}</p>
             <p>Shipping Charge: ${totalShipping}</p>
-            <p>Tax: ${tax}</p>
+            <p>Tax(5%): ${tax}</p>
             <h4 style={{ fontSize: "21px", fontWeight: "400" }}>Grand Total: ${grandTotal}</h4>
         </div>
     );
