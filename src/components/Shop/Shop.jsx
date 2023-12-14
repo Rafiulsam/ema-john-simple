@@ -17,7 +17,7 @@ const Shop = () => {
         const savedCart =[]
         for (const id in storedCart) {
             const savedProducts = products.find(product => product.id === id)
-
+            
             if (savedProducts) {
                 const quantity = storedCart[id]
                 savedProducts.quantity = quantity 
