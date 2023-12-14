@@ -3,8 +3,7 @@ import './Cart.css'
 const Cart = ({ cart }) => {
     let totalPrice = 0
     let totalShipping = 0
-    let quantity = 0
-    console.log(cart);
+    let quantity = 0;
     for (const product of cart) {
         if (product.quantity === 0) {
             product.quantity = 1
@@ -12,7 +11,6 @@ const Cart = ({ cart }) => {
         totalPrice += product.price * product.quantity
         totalShipping += product.shipping
         quantity += product.quantity
-        console.log(product);
     }
     const tax = totalPrice * 5 / 100
     const grandTotal = totalPrice + totalShipping + tax
