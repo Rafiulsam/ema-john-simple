@@ -4,6 +4,8 @@ import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
 import { addToDb, getShoppingCart } from '../../utilities/fakedb';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 const Shop = () => {
     const [products, setProducts] = useState([])
     const [cart, setCart] = useState([])
@@ -15,19 +17,19 @@ const Shop = () => {
 
     useEffect(() => {
         const storedCart = getShoppingCart()
-        const savedCart =[]
+        const savedCart = []
         for (const id in storedCart) {
             const savedProducts = products.find(product => product.id === id)
-            
+
             if (savedProducts) {
                 const quantity = storedCart[id]
-                savedProducts.quantity = quantity 
+                savedProducts.quantity = quantity
                 savedCart.push(savedProducts)
             }
         }
         setCart(savedCart)
     }, [products])
-    
+
     const handleAddToCart = (product) => {
         const newCart = [...cart, product]
         setCart(newCart)
@@ -45,8 +47,10 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container">
-                <Cart cart={cart}> 
-                <Link to='/order'> </Link>
+                <Cart cart={cart}>
+                    <Link to='/order'>
+                        <button className='btn-proceed'>Review Order <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon></button>
+                    </Link>
                 </Cart>
             </div>
         </div>
