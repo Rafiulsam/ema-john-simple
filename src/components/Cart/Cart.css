@@ -4,4 +4,5 @@
 .cart{
     position: sticky;
     top: 25px;
+    background-color: bisque;
 }
