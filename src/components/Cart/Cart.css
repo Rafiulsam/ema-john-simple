@@ -1,8 +1,27 @@
-.cart p{
+.cart p {
     color: #2A414F;
 }
-.cart{
+
+.cart {
     position: sticky;
     top: 25px;
     background-color: bisque;
+}
+
+.btn-clear-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    background: #FF3030;
+    width: 90%;
+    margin: 0 auto;
+    height: 56px;
+    color: white;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
 }
