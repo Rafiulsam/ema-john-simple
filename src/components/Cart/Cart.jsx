@@ -7,9 +7,9 @@ const Cart = ({ cart, handleClearCart, children }) => {
     let totalShipping = 0
     let quantity = 0;
     for (const product of cart) {
-        if (product.quantity === 0) {
-            product.quantity = 1
-        }
+        // if (product.quantity === 0) {
+        //     product.quantity = 1
+        // }
         totalPrice += product.price * product.quantity
         totalShipping += product.shipping
         quantity += product.quantity
