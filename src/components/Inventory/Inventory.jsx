@@ -3,7 +3,7 @@ import React from 'react';
 const Inventory = () => {
     return (
         <div>
-            <h1>this is inventory page</h1>
+            <h1 style={{textAlign:'center'}}>Inventory coming soon</h1>
         </div>
     );
 };

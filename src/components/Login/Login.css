@@ -21,7 +21,7 @@
     color: #2A414F;
     font-size: 17px;
     font-weight: 400;
-    margin-bottom: 9px;
+    margin: 20px 0;
 }
 
 .form-control input {
@@ -31,7 +31,6 @@
     height: 55px;
     border-radius: 5px;
     border: 1px solid #95A0A7;
-    margin-bottom: 20px;
 }
 
 .btn-submit {
@@ -43,7 +42,7 @@
     background: rgba(255, 153, 0, 0.30);
     cursor: pointer;
     margin-bottom: 8px;
-    margin-top: 20px;
+    margin-top: 41px;
 }
 .btn-submit:hover{
     background: #ffa500
