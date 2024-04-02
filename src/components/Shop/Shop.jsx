@@ -23,8 +23,8 @@ const Shop = () => {
             const savedProducts = products.find(product => product.id === id)
 
             if (savedProducts) {
-                const quantity = storedCart[id]
-                savedProducts.quantity = quantity
+                const quantity = storedCart[id];
+                savedProducts.quantity = quantity;
                 savedCart.push(savedProducts)
             }
         }
@@ -34,14 +34,14 @@ const Shop = () => {
     const handleAddToCart = (product) => {
         let newCart = [];
         // const newCart = [...cart, product]
-        const exists = cart.find(pd => pd._id === product._id);
+        const exists = cart.find(pd => pd.id === product.id);
         if (!exists) {
             product.quantity = 1;
             newCart = [...cart, product]
         }
         else {
             exists.quantity = exists.quantity + 1;
-            const remaining = cart.filter(pd => pd._id !== product._id);
+            const remaining = cart.filter(pd => pd.id !== product.id);
             newCart = [...remaining, exists];
         }
         setCart(newCart)
