@@ -13,7 +13,6 @@ const Cart = ({ cart, handleClearCart, children }) => {
         totalPrice += product.price * product.quantity
         totalShipping += product.shipping
         quantity += product.quantity
-        console.log(quantity);
     }
     const tax = totalPrice * 5 / 100
     const grandTotal = totalPrice + totalShipping + tax

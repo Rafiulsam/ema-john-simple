@@ -9,7 +9,6 @@ import { faCreditCard } from '@fortawesome/free-solid-svg-icons'
 const Order = () => {
     const savedCart = useLoaderData()
     const [cart, setCart] = useState(savedCart)
-    console.log(cart);
 
     const handleRemoveFromCart = id => {
         const remaining = cart.filter(product => product.id !== id)
@@ -25,12 +24,12 @@ const Order = () => {
         <div className="shop-container">
             <div className='review-container'>
                 {
-                    cart.map(product => <ReviewItem
+                    cart.length != 0 ? cart.map(product => <ReviewItem
                         key={product.id}
                         product={product}
-                        handleRemoveFromCart={handleRemoveFromCart}
-                    >
-                    </ReviewItem>)
+                        handleRemoveFromCart={handleRemoveFromCart}>
+                    </ReviewItem>) : <div className='empty-cart'><h2>Your cart is empty!</h2>
+                        <Link to="/"><button >Continue shopping</button></Link> </div>
                 }
             </div>
             <div className="cart-container">

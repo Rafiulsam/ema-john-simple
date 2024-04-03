@@ -7,10 +7,12 @@ const Header = () => {
 
     const { user, logOut } = useContext(AuthContext)
 
-    const handleSignOut = ()=>{
+    const handleSignOut = () => {
         logOut()
-        .then(result=>{})
-        .catch(error=>{console.log(error);})
+            .then(result => {
+
+            })
+            .catch(error => { console.log(error); })
     }
     return (
         <nav className='header'>
