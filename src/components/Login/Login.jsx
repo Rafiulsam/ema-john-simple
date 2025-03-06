@@ -1,14 +1,13 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import './Login.css'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
-
 const Login = () => {
     const [error, setError] = useState('')
+    const [showPass, setShowPass] = useState(false)
     const { signIn } = useContext(AuthContext)
     const navigate = useNavigate()
     const location = useLocation()
-    console.log(location);
 
     const from = location.state?.from?.pathname || '/'
     const handleSignIn = event => {
@@ -31,6 +30,11 @@ const Login = () => {
         })
     }
 
+    const handlePassShow=(e)=>{
+        e.preventDefault()
+        setShowPass(!showPass)
+    }
+
     return (
         <div className='form-container'>
             <h4 className='form-title'>Login</h4>
@@ -41,11 +45,12 @@ const Login = () => {
                 </div>
                 <div className="form-control">
                     <label htmlFor="password">Password</label>
-                    <input type="password" name='password' placeholder='Your password' required />
+                    <input type={showPass? "text":"password"} name='password' placeholder='Your password' required />
+                    <button  className='showPass-btn' onClick={handlePassShow} role='button'>{showPass ? "Hide":"Show" }  </button>
                 </div>
                 <small>{error}</small>
                 <input className='btn-submit' type="submit" value="Login" />
-                <p><small>New to ema-john? <Link to='/signup'>Create new account</Link></small></p>
+                <p><small>Don't have an account <Link to='/signup'>Create new account</Link></small></p>
             </form>
         </div>
     );

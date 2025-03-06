@@ -1,4 +1,3 @@
-import React from 'react';
 import './Cart.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashAlt} from '@fortawesome/free-solid-svg-icons'
@@ -18,7 +17,7 @@ const Cart = ({ cart, handleClearCart, children }) => {
     const grandTotal = totalPrice + totalShipping + tax
     return (
         <div className='cart'>
-            <h3 style={{ textAlign: 'center', fontWeight: "400", fontSize: '25px' }}>Order Summary</h3>
+            <h3 style={{ textAlign: 'center', fontWeight: "400", fontSize: '25px' }}>Your Cart</h3>
             <p>Selected Items: {quantity}</p>
             <p>Total Price: ${totalPrice}</p>
             <p>Shipping Charge: ${totalShipping}</p>

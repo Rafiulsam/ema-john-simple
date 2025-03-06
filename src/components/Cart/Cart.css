@@ -4,8 +4,8 @@
 
 .cart {
     position: sticky;
-    top: 25px;
-    background-color: bisque;
+    top: 100px;
+    background-color: lavenderblush;
 }
 
 .btn-clear-cart {
@@ -24,4 +24,8 @@
     font-weight: 400;
     border: none;
     cursor: pointer;
+}
+
+.btn-clear-cart:hover{
+    background: #c54848;
 }

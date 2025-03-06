@@ -5,17 +5,33 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .header a{
     text-decoration: none;
-    margin-left: 32px;
+    margin-right: 32px;
     color: #ffff;
 }
 .header a:hover{
     color: orange;
 }
-.text-white{
+.display-name{
+    border-radius: 8px;
+    padding: 8px;
+    border: solid orange 1px;
     color: #ffff;
-    margin-left: 5px;
+    margin-right: 5px;
+}
+nav img{
+    height: 43px;
+}
+
+.btn-sign-out{
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: orange;
 }

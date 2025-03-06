@@ -2,12 +2,13 @@
     width: 571px;
     height: 107px;
     border-radius: 8px;
-    border: 1px solid #95A0A7;
+    /* border: 1px solid #95A0A7; */
     margin-bottom: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 8px;
+    box-shadow: 1px 21px 24px -6px rgba(0, 0, 0, 0.75); 
 }
 
 .review-title {
@@ -35,13 +36,16 @@
 }
 
 .del-btn{
-    background-color: #EB57574D;
+    background-color: lavenderblush;
     width: 55px;
     height: 55px;
     border-radius: 50%;
     border: none;
     margin-right: 15px;
     cursor: pointer;
+}
+.del-btn:hover{
+    background-color: rgb(252, 214, 226)
 }
 .del-icon{
     color: #EB5757;

@@ -7,13 +7,13 @@
     margin: 50px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+    gap: 50px;
     justify-items: center;
 }
 
 .cart-container {
     padding: 23px;
-    background-color: bisque;
+    background-color: lavenderblush;
 }
 
 .cart-container a{
@@ -35,5 +35,9 @@
     border: none;
     cursor: pointer;
     border-radius: 4px;
-    background: #F90;
+    background: #3E5A6A;
+}
+
+.btn-proceed:hover{
+    background: #324957;
 }
