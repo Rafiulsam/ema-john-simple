@@ -65,8 +65,8 @@
     text-decoration: underline;
 }
 .showPass-btn{
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 14px;
+    width: 40px;
     color: #2c4555;
     border-radius: 8px;
     border: none;
@@ -74,8 +74,9 @@
     top: -41px;
     left: 430px;
     cursor: pointer;
+    
 }
 
 .showPass-btn:hover{
-    background-color: #95A0A7;
+    font-weight: 700;
 }

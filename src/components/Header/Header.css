@@ -10,18 +10,22 @@
     z-index: 1;
 }
 
-.header a{
+.navLink a{
+    border: solid grey 1px;
+    padding: 5px;
+    border-radius: 8px;
+    font-weight: 600;
     text-decoration: none;
     margin-right: 32px;
     color: #ffff;
 }
-.header a:hover{
-    color: orange;
+.navLink a:hover{
+    color: rgb(50, 148, 228);
 }
 .display-name{
     border-radius: 8px;
     padding: 8px;
-    border: solid orange 1px;
+    border: solid grey 1px;
     color: #ffff;
     margin-right: 5px;
 }
