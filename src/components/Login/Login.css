@@ -80,3 +80,18 @@
 .showPass-btn:hover{
     font-weight: 700;
 }
+
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+        padding: 20px;
+        margin: 50px auto;
+    }
+    .form-control input {
+        width: 100%;
+    }
+    .showPass-btn {
+        left: auto;
+        right: 10px;
+    }
+}

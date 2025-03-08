@@ -1,4 +1,4 @@
-.header{
+.header {
     background-color: #1C2B35;
     height: 80px;
     padding: 0 100px;
@@ -8,34 +8,96 @@
     position: sticky;
     top: 0;
     z-index: 1;
+    transition: padding 0.3s ease;
 }
 
-.navLink a{
+.navLink a {
     border: solid grey 1px;
-    padding: 5px;
+    padding: 5px 12px;
     border-radius: 8px;
     font-weight: 600;
     text-decoration: none;
     margin-right: 32px;
-    color: #ffff;
+    color: #fff;
+    transition: color 0.3s ease;
 }
-.navLink a:hover{
+
+.navLink a:hover {
     color: rgb(50, 148, 228);
 }
-.display-name{
+
+.display-name {
     border-radius: 8px;
     padding: 8px;
     border: solid grey 1px;
-    color: #ffff;
+    color: #fff;
     margin-right: 5px;
 }
-nav img{
+
+nav img {
     height: 43px;
 }
 
-.btn-sign-out{
+.btn-sign-out {
     cursor: pointer;
     border-radius: 8px;
-    padding: 10px;
+    padding: 10px 20px;
     background-color: orange;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-sign-out:hover {
+    background-color: rgb(255, 127, 0);
+}
+
+@media (max-width: 1024px) {
+    .header {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .navLink a {
+        margin-right: 0;
+        margin-bottom: 12px;
+        font-size: 14px;
+    }
+
+    .display-name {
+        margin-left: 5px;
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .btn-sign-out {
+        font-size: 14px;
+        padding: 5px 10px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 15px;
+    }
+
+    .navLink a {
+        font-size: 12px;
+    }
+
+    .display-name {
+        font-size: 12px;
+    }
+
+    .btn-sign-out {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
 }
