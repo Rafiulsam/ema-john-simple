@@ -1,21 +1,28 @@
-import './Product.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import './Product.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart, faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
 
+const Product = ({ product, handleAddToCart }) => {
+    const { name, img, price, seller, ratings } = product;
 
-const Product = (props) => {
-    const { name, img, price, seller, ratings } = props.product
-    const handleAddToCart = props.handleAddToCart
     return (
-        <div onClick={()=>handleAddToCart(props.product)} className='product'>
-            <img src={img} alt="" />
+        <div className='product'>
+            <img src={img} alt={name} />
             <div className='details'>
                 <h6 className='name'>{name}</h6>
                 <p className='price'>Price: ${price}</p>
                 <p className='manufacturer'><small>Manufacturer: {seller}</small></p>
-                <p className='rating'><small>Rating:{ratings} Stars</small></p>
+                <p className='rating'>
+                    <small>Rating: </small>
+                    {[...Array(Math.floor(ratings))].map((_, i) => (
+                        <FontAwesomeIcon key={i} icon={faStar} style={{ color: 'gold' }} />
+                    ))}
+                    {ratings % 1 !== 0 && <FontAwesomeIcon icon={faStarHalfAlt} style={{ color: 'gold' }} />}
+                </p>
             </div>
-            <button  className='btn-cart'> Add To Cart <FontAwesomeIcon icon={faShoppingCart} /></button>
+            <button onClick={() => handleAddToCart(product)} className='btn-cart'>
+                Add To Cart <FontAwesomeIcon icon={faShoppingCart} />
+            </button>
         </div>
     );
 };

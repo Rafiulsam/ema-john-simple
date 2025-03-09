@@ -69,7 +69,7 @@ const Shop = () => {
                     handleClearCart={handleClearCart}
                 >
                     <Link to='/reviewitems'>
-                        <button className='btn-proceed'>Review Orders <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon></button>
+                        <button className='btn-proceed'>Review Items <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon></button>
                     </Link>
                 </Cart>
             </div>

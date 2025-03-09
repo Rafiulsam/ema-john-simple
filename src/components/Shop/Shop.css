@@ -11,15 +11,8 @@
     justify-items: center;
 }
 
-.cart-container a {
-    text-decoration: none;
-}
 
 .btn-proceed {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
     width: 100%;
     margin: 0 auto;
     height: 56px;
@@ -32,6 +25,7 @@
     border-radius: 4px;
     background: #3E5A6A;
     transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
 .btn-proceed:hover {
@@ -64,7 +58,7 @@
     }
 
     .products-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         margin: 20px;
         gap: 20px;
     }
@@ -82,7 +76,7 @@
     }
 
     .products-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         margin: 15px;
         gap: 15px;
     }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Order.css'
 import Cart from '../Cart/Cart';
 import { Link, useLoaderData } from 'react-router-dom';
